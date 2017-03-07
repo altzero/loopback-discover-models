@@ -1,13 +1,18 @@
-<h3>I simple CLI tool to discover and write new model.json and model.js files by using loopback's datasource.discoverSchema API</h3>
 
+
+<h3>A simple CLI tool to discover and write new model.json and model.js files by using loopback's datasource.discoverSchema API</h3>
+
+<h3>Install</h3>
+
+    $ npm install adamlutz/loopback-discover-models --save
 
 <h3>Usage</h3>
 ```
-./node_modules/.bin/loopback-discover-models -h                                                      
+./node_modules/.bin/loopback-discover-models -h
 Usage:
   loopback-discover-models [OPTIONS] [ARGS]
 
-Options: 
+Options:
       --serverPath [PATH]Path to server.js (relative to CWD). (Default is /server/server.js)
       --modelConfigPath [PATH]Path to model-config.json (relative to CWD). (Default is /server/model-config.json)
       --modelDir [PATH]  Path to models folder (relative to CWD). (Default is /common/models)
@@ -21,7 +26,7 @@ Options:
       --skip STRING      Comma seperate model names to skip when discovering new models.
   -h, --help             Display help and usage details
   ```
-  
+
 <h5>Generate Models for all tables in the database that don't already exist as models.</h5>
 ```
 ./node_modules/.bin/loopback-discover-models --allNewModels

@@ -136,7 +136,22 @@ function main(options) {
     }
 
     function defaultJsFileContents(modelName) {
-        return 'module.exports = function(/*'+modelName+'*/){};'
+        return 'module.exports = function('+ modelName + '){' \
+               '' + modelName + '.disableRemoteMethodByName("create");' \
+               '' + modelName + '.disableRemoteMethodByName("createUpdates");' \
+               '' + modelName + '.disableRemoteMethodByName("upsert");' \
+               '' + modelName + '.disableRemoteMethodByName("upsertWithWhere");' \
+               '' + modelName + '.disableRemoteMethodByName("update");' \
+               '' + modelName + '.disableRemoteMethodByName("findOrCreate");' \
+               '' + modelName + '.disableRemoteMethodByName("deleteById");' \
+               '' + modelName + '.disableRemoteMethodByName("updateAll");' \
+               '' + modelName + '.disableRemoteMethodByName("prototype.updateAttributes");' \
+               '' + modelName + '.disableRemoteMethodByName("createChangeStream");' \
+               '' + modelName + '.disableRemoteMethodByName("confirm");' \
+               '' + modelName + '.disableRemoteMethodByName("replace");' \
+               '' + modelName + '.disableRemoteMethodByName("replaceById");' \
+               '' + modelName + '.disableRemoteMethodByName("replaceOrCreate");' \
+            '};'
     }
 
     function updateModelConfig(schema) {

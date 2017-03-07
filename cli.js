@@ -136,22 +136,22 @@ function main(options) {
     }
 
     function defaultJsFileContents(modelName) {
-        return 'module.exports = function('+ modelName + '){' \
-               '' + modelName + '.disableRemoteMethodByName("create");' \
-               '' + modelName + '.disableRemoteMethodByName("createUpdates");' \
-               '' + modelName + '.disableRemoteMethodByName("upsert");' \
-               '' + modelName + '.disableRemoteMethodByName("upsertWithWhere");' \
-               '' + modelName + '.disableRemoteMethodByName("update");' \
-               '' + modelName + '.disableRemoteMethodByName("findOrCreate");' \
-               '' + modelName + '.disableRemoteMethodByName("deleteById");' \
-               '' + modelName + '.disableRemoteMethodByName("updateAll");' \
-               '' + modelName + '.disableRemoteMethodByName("prototype.updateAttributes");' \
-               '' + modelName + '.disableRemoteMethodByName("createChangeStream");' \
-               '' + modelName + '.disableRemoteMethodByName("confirm");' \
-               '' + modelName + '.disableRemoteMethodByName("replace");' \
-               '' + modelName + '.disableRemoteMethodByName("replaceById");' \
-               '' + modelName + '.disableRemoteMethodByName("replaceOrCreate");' \
-            '};'
+        return 'module.exports = function('+ modelName + '){'
+                   + modelName + '.disableRemoteMethodByName("create");\r'
+                   + modelName + '.disableRemoteMethodByName("createUpdates");\r'
+                   + modelName + '.disableRemoteMethodByName("upsert");\r'
+                   + modelName + '.disableRemoteMethodByName("upsertWithWhere");\r'
+                   + modelName + '.disableRemoteMethodByName("update");\r'
+                   + modelName + '.disableRemoteMethodByName("findOrCreate");\r'
+                   + modelName + '.disableRemoteMethodByName("deleteById");\r'
+                   + modelName + '.disableRemoteMethodByName("updateAll");\r'
+                   + modelName + '.disableRemoteMethodByName("prototype.updateAttributes");\r'
+                   + modelName + '.disableRemoteMethodByName("createChangeStream");\r'
+                   + modelName + '.disableRemoteMethodByName("confirm");\r'
+                   + modelName + '.disableRemoteMethodByName("replace");\r'
+                   + modelName + '.disableRemoteMethodByName("replaceById");\r'
+                   + modelName + '.disableRemoteMethodByName("replaceOrCreate");\r'
+                   + '};'
     }
 
     function updateModelConfig(schema) {
